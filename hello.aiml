@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<category>
+      <pattern>What is your name</pattern>
+      <template>
+          <delay>1</delay>My name is Chatty, and I'll be advising you with your
+          career goals in Computer Science. <split/>
+          What is your first, and last name?
+          <think>
+              <set name="topic">name1</set>
+          </think>
+      </template>
+    </category>
+    <category>
+      <pattern>How are you doing</pattern>
+      <template>
+          <delay>1</delay>I am doing well, and thank you for asking.<split/>
+          <srai>What is your name</srai>
+      </template>
+    </category>
+    <category>
+    <pattern>_ how are you doing</pattern>
+    <template>
+        <srai>How are you doing</srai>
+    </template>
+    </category>
+    <category>
+    <pattern>Hi</pattern>
+    <template>
+        <delay>1</delay>Hi<split/> 
+        <srai>What is your name</srai>
+    </template>
+    </category>
+    <category>
+      <pattern>Hello</pattern>
+      <template>
+          <srai>Hi</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>Hey</pattern>
+      <template>
+          <srai>Hi</srai>
+      </template>
+    </category>
+	
+</aiml>

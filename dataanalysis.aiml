@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name="Data Analysis">
+      
+      <category>
+          <pattern>*</pattern>
+          <template>
+              <delay>1</delay>
+              I'm sorry, I don't understand
+          </template>
+      </category>
+      
+      <category>
+          <pattern>What do data analyst do</pattern>
+          <template>
+              <delay>1</delay>
+              Data analysts are responsible for retrieving, and transforming
+              data into meaningful information.
+              <delay>1</delay>
+              They will often collect data for modeling purposes in a 
+              business, or scientific setting.
+              <think><set name="topic">options1</set></think>
+              <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What do they do</pattern>
+          <template>
+              <srai>What do data analyst do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What does a data analyst do</pattern>
+          <template>
+              <srai>What do data analyst do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>_ tell me about * data analyst</pattern>
+          <template>
+              <srai>What do data analyst do</srai>
+          </template>
+      </category>
+      
+      <category>
+          <pattern>How much does a data analyst earn</pattern>
+          <template>
+              <delay>1</delay>
+              According to the US Bureau of Labor Statistics,
+              data analysts earn approximately $40 per hour.
+             <think><set name="topic">options1</set></think>
+             <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they earn</pattern>
+          <template>
+              <srai>How much does a data analyst earn</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much does a data analyst make</pattern>
+          <template>
+              <srai>How much does a data analyst earn</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they make</pattern>
+          <template>
+              <srai>How much does a data analyst earn</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they earn per hour</pattern>
+          <template>
+              <srai>How much does a data analyst earn</srai>
+          </template>
+      </category>
+      
+      
+      <category>
+          <pattern>what is the job outlook</pattern>
+          <template>
+             <delay>1</delay>
+             According to the US Bureau of Labor Statistics, 
+             careers in data analysis are expected to grow 25%
+             over the course of ten years.
+             <think><set name="topic">options1</set></think>
+             <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for *</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>_ job outlook for data analyst *</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for this field</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      
+    </topic>
+    
+</aiml>

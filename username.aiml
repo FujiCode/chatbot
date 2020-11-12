@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name="name1">
+    <category>
+          <pattern>My name is * *</pattern>
+          <template>
+              It's nice to meet you, <formal>
+                                       <set name="first_name">
+                                         <star index="1"/>
+                                       </set>
+                                     </formal>
+              <think>
+                  <formal>
+                      <set name="last_name"><star index="2"/></set>
+                  </formal>
+              </think>
+              <delay>1</delay>
+              I'm going to ask you about some things that 
+              you have enjoyed in your degree program thus far, 
+              and may offer a recommendation.
+              <delay>1</delay>
+              Lets get started. In one, or two words,
+              can you please tell me one thing you have enjoyed 
+              learning in your degree program?
+              <think>
+                  <set name="continue">true</set>
+                  <set name="webdopen">true</set>
+                  <set name="mobileopen">true</set>
+                  <set name="dataanalysisopen">true</set>
+                  <set name="softwareengineeringopen">true</set>
+                  <set name="databaseadopen">true</set>
+                  <set name="topic">first</set>
+              </think>
+          </template>
+    </category>
+    <category>
+        <pattern>* *</pattern>
+        <template>
+            <srai>My name is <star index="1"/> <star index="2"/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>
+            <delay>1</delay>
+            Please enter your first name followed by your last name.
+        </template>
+    </category>
+    </topic>    
+    
+</aiml>

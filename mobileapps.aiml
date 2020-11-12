@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+  <topic name="Mobile Apps">
+      
+      <category>
+          <pattern>*</pattern>
+          <template>
+              <delay>1</delay>
+              I'm sorry, I don't understand
+          </template>
+      </category>
+      
+      <category>
+          <pattern>What does a mobile app developer do</pattern>
+          <template>
+              <delay>3</delay>
+              These app developers build software products for particular
+              operating systems such as iOS, or Windows. Once the product has
+              been released, they will maintain the product such as applying
+              updates.
+              <delay>3</delay>
+              App developers require creativity, analytical, and teambuilding
+              skills in building the product.
+              <think><set name="topic">options1</set></think>
+              <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What do they do</pattern>
+          <template>
+              <srai>What does a mobile app developer do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>Can you tell * they do</pattern>
+          <template>
+              <srai>What does a mobile app developer do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What do mobile app developers do</pattern>
+          <template>
+              <srai>What does a mobile app developer do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What does an app developer do</pattern>
+          <template>
+              <srai>What does a mobile app developer do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What does a app developer do</pattern>
+          <template>
+              <srai>What does a mobile app developer do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What does a mobile application developer do</pattern>
+          <template>
+              <srai>What does a mobile app developer do</srai>
+          </template>
+      </category>
+      
+      <category>
+          <pattern>what is the job outlook</pattern>
+          <template>
+             <delay>2</delay>
+             Mobile app developers may fall under the category
+             of "Software Developer," so according to the US 
+             Bureau of Labor Statistics, careers in software development 
+             are expected to grow 22%.
+             <think><set name="topic">options1</set></think>
+             <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for *</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>_ job outlook for mobile app *</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for this *</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      
+  </topic>
+  
+</aiml>

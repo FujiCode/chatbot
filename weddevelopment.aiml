@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <topic name="Web Development">
+      
+      <category>
+          <pattern>*</pattern>
+          <template>
+              <delay>1</delay>
+              I'm sorry, I don't understand. Please rephrase your
+              question.
+          </template>
+      </category>
+      
+      <category>
+          <pattern>What does a web developer do</pattern>
+          <template>
+              <delay>1</delay>
+              Web developers build and design websites.
+              <delay>2</delay>
+              Web development can be broken down into
+              three components: front-end, back-end, and full stack.
+              <delay>2</delay>
+              Front end development deals mostly with the
+              graphical interface with the user to the application, whereas
+              back-end development deals mostly with the code that runs the
+              application along with any databases if applicable. Full-stack 
+              development is the combination of front-end, and back-end
+              development.
+              <think><set name="topic">options1</set></think>
+              <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>what do they do</pattern>
+          <template>
+              <srai>What does a web developer do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>Can you tell * they do</pattern>
+          <template>
+              <srai>What does a web developer do</srai>
+          </template>
+      </category>
+      
+      <category>
+          <pattern>How much do web developers earn per hour</pattern>
+          <template>
+             <delay>2</delay>According to the US Bureau of Labor Statistics,
+             web developers earn approximately $35 per hour.
+             <think><set name="topic">options1</set></think>
+             <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they get paid</pattern>
+          <template>
+              <srai>How much do web developers earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do web developers get paid</pattern>
+          <template>
+              <srai>How much do web developers earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do web developers earn</pattern>
+          <template>
+              <srai>How much do web developers earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they make</pattern>
+          <template>
+              <srai>How much do web developers earn per hour</srai>
+          </template>
+      </category>
+       <category>
+          <pattern>How much do they earn</pattern>
+          <template>
+              <srai>How much do web developers earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much does a web developer make</pattern>
+          <template>
+              <srai>How much do web developers earn per hour</srai>
+          </template>
+      </category>
+      
+      <category>
+          <pattern>what is the job outlook for web developers</pattern>
+          <template>
+             <delay>2</delay>According to the US Bureau of Labor Statistics,
+             careers in web development are expected to grow 8% over the next
+             ten years. 
+             <think><set name="topic">options1</set></think>
+             <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for this field</pattern>
+          <template>
+              <srai>
+                  what is the job outlook for web developers
+              </srai>      
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for web development</pattern>
+          <template>
+              <srai>
+                  what is the job outlook for web developers
+              </srai>      
+          </template>
+      </category>
+      <category>
+          <pattern>_ job growth _</pattern>
+          <template>
+              <srai>
+                  what is the job outlook for web developers
+              </srai>   
+          </template>
+      </category>
+  </topic>
+  
+</aiml>

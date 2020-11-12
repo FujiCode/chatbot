@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+ 
+    <topic name="yesorno1">
+        <category>
+            <pattern>yn1</pattern>
+            <template>
+                <think>
+                    <set name="topic">yesorno2</set>
+                </think>
+                <button>
+                    <text>Yes</text>
+                    <postback>Y</postback>
+                </button>
+                <button>
+                    <text>No</text>
+                    <postback>N</postback>
+                </button>
+            </template>
+        </category>
+    </topic>
+    <topic name="yesorno2">
+        <category>
+            <pattern>Y</pattern>
+            <template>
+                <think><set name="topic"><get name="career"/></set></think>
+                <delay>1</delay>
+                What would you like to know about <get name="career"/>?
+            </template>
+        </category>
+        <category>
+            <pattern>N</pattern>
+            <template>
+                <condition name="career">
+                    <li value="Web Development">
+                        <think><set name="webdopen">false</set></think>
+                    </li>
+                    <li value="Data Analysis">
+                        <think><set name="dataanalysisopen">false</set></think>
+                    </li>
+                    <li value="Software Engineering">
+                        <think>
+                            <set name="softwareengineeringopen">false</set>
+                        </think>
+                    </li>
+                    <li value="Database Administration">
+                        <think>
+                            <set name="databaseadopen">false</set>
+                        </think>
+                    </li>
+                    <li value="Mobile Apps">
+                        <think><set name="mobileopen">false</set></think>
+                    </li>
+                </condition>
+                <condition name="webdopen" value="false">
+                <condition name="dataanalysisopen" value="false">
+                <condition name="softwareengineeringopen" value="false">
+                <condition name="databaseadopen" value="false">
+                <condition name="mobileopen" value="false">
+                    <think><set name="continue">false</set></think>
+                </condition>    
+                </condition>    
+                </condition>        
+                </condition>
+                </condition>
+                
+                <condition name="continue">
+                    <li value ="true">
+                        <think>
+                            <set name="topic">first</set>
+                        </think>
+                        <delay>1</delay>
+                        Okay, lets find out what else you want enjoyed as a 
+                        career.
+                        <delay>1</delay>
+                        In one, or two words, can you tell me 
+                        one thing you have enjoyed in your program so far?
+                    </li>
+                    <li value="false">
+                        <think><set name="topic">restartorstop</set></think>
+                        <delay>1</delay>
+                        I'm sorry, but I don't have any more recommendations
+                        for you. Would you like to try again?
+                        <button>
+                            <text>Yes</text>
+                            <postback>Yes</postback>
+                        </button>
+                         <button>
+                            <text>No</text>
+                            <postback>No</postback>
+                        </button>
+                    </li>
+                </condition>
+            </template>
+        </category>
+        
+    </topic>
+    
+	<topic name="restartorstop">
+	    <category>
+	        <pattern>Yes</pattern>
+	        <template>
+	            <delay>1</delay>
+                Sure, lets start over again.
+                <delay>1</delay>
+                In one, or two words, can you tell me
+                what you have enjoyed in your degree 
+                program so far?
+	            <think>
+                    <set name="continue">true</set>                     
+                    <set name="webdopen">true</set>
+                    <set name="mobileopen">true</set>
+                    <set name="dataanalysisopen">true</set>
+                    <set name="softwareengineeringopen">
+                        true
+                    </set>
+                    <set name="databaseadopen">true</set>
+                    <set name="topic">first</set>
+                </think>
+	        </template>
+        </category>
+        <category>
+            <pattern>No</pattern>
+            <template>
+                <think><set name="topic">done</set></think>
+                <delay>1</delay>
+                I'm sorry I wasn't able to help, and be sure
+                to contact a career advisor. Please a good day.
+            </template>
+        </category>
+	</topic>
+	
+	<topic name="done">
+	    <category>
+	        <pattern>*</pattern>
+	        <template>
+	            Please restart the session by saying "hi" or "hello."
+	        </template>
+    </category>
+	
+	
+	</topic>
+	
+</aiml>

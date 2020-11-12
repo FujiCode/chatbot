@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name="Database Administration">
+      
+      <category>
+          <pattern>*</pattern>
+          <template>
+              <delay>1</delay>
+              I'm sorry, I don't understand
+          </template>
+      </category>
+      
+      
+      <category>
+          <pattern>What do database administrators do</pattern>
+          <template>
+              <delay>2</delay>
+              Database administrators are responsible for 
+              storing, and organizaing data.
+              <delay>2</delay>
+              They are not responsible 
+              for analyzing data, but rather, structuring the 
+              organization of data to preserve integrity, 
+              to retrieve data efficiently, and to provide 
+              some level of security.
+              <delay>2</delay>
+              They can be thought of as the "gatekeepers" of
+              data for an business, or organization.
+              <delay>3</delay>
+              Additionally, database administrators 
+              will often work with business leaders, 
+              and software development teams in a collaborative manner.
+              <think><set name="topic">options1</set></think>
+              <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What do they do</pattern>
+          <template>
+              <srai>What do database administrators do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>Can you tell * they do</pattern>
+          <template>
+              <srai>What do database administrators do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What does a database administrator do</pattern>
+          <template>
+              <srai>What do database administrators do</srai>
+          </template>
+      </category>
+      
+      <category>
+          <pattern>How much does a database 
+          administrator earn per hour</pattern>
+          <template>
+              <delay>2</delay>
+               According to the US Bureau of Labor Statistics, database
+               administrators earn approximately $45 per hour.
+               <think><set name="topic">options1</set></think>
+               <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they make</pattern>
+          <template>
+              <srai>
+                  How much does a database administrator earn per hour
+              </srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they earn per hour</pattern>
+          <template>
+              <srai>
+                  How much does a database administrator earn per hour
+              </srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much does a database administrator earn</pattern>
+          <template>
+              <srai>
+                  How much does a database administrator earn per hour
+              </srai>
+          </template>
+      </category>
+      <category>
+          <pattern>what is the job outlook</pattern>
+          <template>
+             <delay>2</delay>
+             According to the US Bureau of Labor Statistics,
+             careers in database administration 
+             are expected to grow 10% over the next ten years which is faster 
+             than the average rate of all jobs within that same time period.
+             <think><set name="topic">options1</set></think>
+             <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is * job outlook for database administrators</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for this field</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for database administration</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What is the job outlook for database administrators</pattern>
+          <template>
+              <srai>what is the job outlook</srai>
+          </template>
+      </category>
+      
+  </topic>
+  
+</aiml>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <topic name="first">
+	<category>
+	   <pattern>*</pattern>
+	   <template>
+	     <think>
+	        <set name="x1"><star/></set>
+	        <set name="topic">second</set>
+	     </think>
+	     <delay>1</delay>
+	        What is another thing you have enjoyed
+	        in your degree program?
+	    </template>
+    </category>
+    <category>
+	   <pattern>* *</pattern>
+	   <template>
+	     <think>
+	        <set name="x1"><star index="1"/> <star index="2"/></set>
+	        <set name="topic">second</set>
+	     </think>
+	     <delay>1</delay>
+	        What is another thing you have enjoyed
+	        in your degree program?
+	   </template>
+    </category>
+    </topic>
+    
+    
+    <topic name="second">
+         <category>
+             <pattern>*</pattern>
+             <template>
+                <think>
+	                <set name="x2"><star index ="1"/></set>
+	                <set name="topic">recommendation1</set>
+	            </think> 
+	            <srai>r1</srai>
+             </template>
+         </category>
+         <category>
+             <pattern>* *</pattern>
+             <template>
+                 <think>
+                     <set name="x2"><star index="1"/> <star index="2"/></set>
+                     <set name="topic">recommendation1</set>
+                 </think>
+                 <srai>r1</srai>
+             </template>
+         </category>
+        
+    </topic>
+    
+</aiml>

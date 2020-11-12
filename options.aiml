@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name="options1">
+	     <category>
+          <pattern>Options</pattern>
+          <template>
+              <delay>3</delay>
+              What would you like to do next?
+              <button>
+                  <text>Ask another question</text>
+                  <postback>
+                      Ask another question
+                  </postback>
+              </button>
+              <button>
+                  <text>Talk about a different career</text>
+                  <postback>
+                      Can we talk about a different carreer
+                  </postback>
+              </button>
+               <button>
+                  <text>Help me decide on another carrer</text>
+                  <postback>
+                      Help me decide on another carrer
+                  </postback>
+              </button>
+              <button>
+                  <text>That's all the questions I have</text>
+                  <postback>
+                      That's all the questions I have
+                  </postback>
+              </button>
+          </template>
+      </category>
+       
+      <category>
+           <pattern>Ask another question</pattern>
+           <template>
+               Sure, what else would you like to know?
+               <think><set name="topic"><get name="career"/></set></think>
+           </template>
+       </category>
+	  </topic>
+	  
+	  <category>
+	      <pattern>_ all the questions I have</pattern>
+	      <template>
+	          Alright, I hope I was helpful in helping you decide
+	          on career choices. Have a good day.
+	      </template>
+      </category>
+	  
+	  <category>
+	      <pattern>Help me decide on another carrer</pattern>
+	      <template>
+	          <think>
+	              <set name="topic">first</set>
+	          </think>
+	          <delay>1</delay>
+	          Sure. In one, or two word Can you tell me one thing 
+	          that you've enjoyed learning in your studies?
+	      </template>
+      </category>
+	  <category>
+	      <pattern>Can we talk about a different carreer</pattern>
+	      <template>
+	          <delay>1</delay>
+	          Sure, which career do you want to talk about?
+	          <button>
+	             <text>Web Development</text>
+	              <postback>
+	                I would like to talk about web development
+                  </postback>
+              </button>
+              <button>
+	              <text>Database Administration</text>
+	              <postback>
+	                 I would like to talk about Database Administration>
+                  </postback>
+              </button>
+              <button>
+	              <text>Software Engineering</text>
+	              <postback>
+	                 I would like to talk about Software Engineering
+                  </postback>
+              </button>
+              <button>
+	              <text>Mobile Apps</text>
+	              <postback>
+	                 I would like to talk about Mobile Apps
+                  </postback>
+              </button>
+              <button>
+	              <text>Data Analysis</text>
+	              <postback>
+	                 I would like to talk about Data Anaylsis
+                  </postback>
+              </button>
+	      </template>
+      </category>
+	  
+	  <category>
+	      <pattern>I would like to talk about web development</pattern>
+	      <template>
+	          <delay>1</delay>
+	          Sure, and what would you like to know about this field?
+	          <think>
+	              <set name="topic">Web Development</set>
+	              <set name="career">Web Development</set>
+	          </think>
+	      </template>
+      </category>
+      
+      <category>
+	      <pattern>I would like to talk about Database Administration</pattern>
+	      <template>
+	          <delay>1</delay>
+	          Sure, and what would you like to know about this field?
+	          <think>
+	              <set name="topic">Database Administration</set>
+	              <set name="career">Database Administration</set>
+	          </think>
+	      </template>
+      </category>
+      <category>
+	      <pattern>I would like to talk about Software Engineering</pattern>
+	      <template>
+	          <delay>1</delay>
+	          Sure, and what would you like to know about this field?
+	          <think>
+	              <set name="topic">Software Engineering</set>
+	              <set name="career">Software Engineering</set>
+	          </think>
+	      </template>
+      </category>
+      <category>
+	      <pattern>I would like to talk about Mobile Apps</pattern>
+	      <template>
+	          <delay>1</delay>
+	          Sure, and what would you like to know about this field?
+	          <think>
+	              <set name="topic">Mobile Apps</set>
+	              <set name="career"> Mobile Apps</set>
+	          </think>
+	      </template>
+      </category>
+      <category>
+	      <pattern>I would like to talk about Data Anaylsis</pattern>
+	      <template>
+	          <delay>1</delay>
+	          Sure, and what would you like to know about this field?
+	          <think>
+	              <set name="topic">Data Anaylsis</set>
+	              <set name="career">Data Anaylsis</set>
+	          </think>
+	      </template>
+      </category>
+</aiml>

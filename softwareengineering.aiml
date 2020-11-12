@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name="Software Engineering">
+      
+      <category>
+          <pattern>what do software engineers do</pattern>
+          <template>
+              <delay>2</delay>
+              Software engineers will use engineering principles
+              and various programming 
+              languages to build software applications.
+              <delay>4</delay>
+              In most cases, software engineers will use 
+              data structures and algorithms to design and build their programs
+              for better optizimation, or in other words, making sure the program
+              is running fast with less resources used.
+              <think><set name="topic">options1</set></think>
+              <srai>Options</srai>
+           </template>
+      </category>
+      <category>
+          <pattern>what * they do</pattern>
+          <template>
+              <srai>what do software engineers do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>Can you tell * they do</pattern>
+          <template>
+              <srai>what do software engineers do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>And what do software * do</pattern>
+          <template>
+              <srai>what do software engineers do</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>What does a software engineer do</pattern>
+          <template>
+              <srai>what do software engineers do</srai>
+          </template>
+      </category>
+      
+      <category>
+          <pattern>How much does a software engineer earn per hour</pattern>
+          <template>
+             <delay>2</delay>
+             According to the US Bureau of Labor Statistics,
+             software engineers earn approximately $50 per hour (average).
+             <delay>2</delay>
+             However, the amount you earn from being a software
+             engineer can vary vastly with experience, and skill set.
+             <think><set name="topic">options1</set></think>
+             <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they get paid</pattern>
+          <template>
+              <srai>How much does a software engineer earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do software engineers earn per hour</pattern>
+          <template>
+              <srai>How much does a software engineer earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they make</pattern>
+          <template>
+              <srai>How much does a software engineer earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much do they earn</pattern>
+          <template>
+              <srai>How much does a software engineer earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much does a software engineer earn</pattern>
+          <template>
+              <srai>How much does a software engineer earn per hour</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>How much does a software engineer make</pattern>
+          <template>
+              <srai>How much does a software engineer earn per hour</srai>
+          </template>
+      </category>
+      
+      <category>
+          <pattern>what is the job outlook for software engineers</pattern>
+          <template>
+             <delay>2</delay>
+             According to the US Bureau of Labor Statistics,
+             careers in software engineering/development 
+             are expected to grow 22% over the next ten years which is faster 
+             than the average rate of all jobs within that same time period.
+             <think><set name="topic">options1</set></think>
+             <srai>Options</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>what is the job outlook for this field</pattern>
+          <template>
+              <srai>what is the job outlook for software engineers</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>what is * job outlook</pattern>
+          <template>
+              <srai>what is the job outlook for software engineers</srai>
+          </template>
+      </category>
+      <category>
+          <pattern>job outlook</pattern>
+          <template>
+              <srai>what is the job outlook for software engineers</srai>
+          </template>
+      </category>
+       <category>
+          <pattern>what is the job outlook for a software engineer</pattern>
+          <template>
+              <srai>what is the job outlook for software engineers</srai>
+          </template>
+      </category>
+   </topic>
+   
+</aiml>

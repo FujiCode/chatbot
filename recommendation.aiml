@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name="recommendation1">
+	    
+	     <category>
+	        <pattern>r1</pattern>
+	        <template>
+	            
+	           <think><set name="career">undecided</set></think>
+	           
+	           
+	           <condition name="webdopen" value="true">
+	               <think>
+	                   <set name="y1">
+	                       <map name="keywordsweb"><get name="x1"/></map>
+	                   </set>
+	                   <set name="y2">
+	                        <map name="keywordsweb"><get name="x2"/></map>
+	                   </set>
+	               </think>
+	               <condition name="y1" value="Web Development">
+	                   <condition name="y2" value="Web Development">
+	                       <think>
+	                           <set name="career">Web Development</set>
+	                       </think>
+	                       <delay>1</delay><map name="phrases">1</map> 
+	                   </condition>
+	               </condition>
+	           </condition>
+               
+               
+               <condition name="dataanalysisopen" value="true">
+                   <think>
+	                   <set name="y1">
+	                       <map name="keywordsanalysis"><get name="x1"/></map>
+	                   </set>
+	                   <set name="y2">
+	                        <map name="keywordsanalysis"><get name="x2"/></map>
+	                   </set>
+	               </think>
+                   <condition name="y1" value="Data Analysis">
+	                   <condition name="y2" value="Data Analysis">
+	                      <think>
+	                          <set name="career">Data Analysis</set>
+	                      </think>
+	                      <delay>1</delay><map name="phrases">2</map> 
+	                   </condition>
+	               </condition>
+	           </condition>
+	            
+	            
+	           <condition name="softwareengineeringopen" value="true"> 
+	               <think>
+	                   <set name="y1">
+	                       <map name="keywordsengineering">
+	                           <get name="x1"/>
+	                       </map>
+	                   </set>
+	                   <set name="y2">
+	                       <map name="keywordsengineering">
+	                           <get name="x2"/>
+	                       </map>
+	                   </set>
+	               </think>
+	               <condition name="y1" value="Software Engineering">
+	                   <condition name="y2" value="Software Engineering">
+	                       <think>
+	                           <set name="career">Software Engineering</set>
+	                       </think>
+	                       <delay>1</delay><map name="phrases">3</map> 
+	                   </condition>
+	               </condition> 
+	           </condition>
+	           
+	           <condition name="databaseadopen" value="true"> 
+	               <think>
+	                   <set name="y1">
+	                       <map name="keywordsdatabase">
+	                           <get name="x1"/>
+	                       </map>
+	                   </set>
+	                   <set name="y2">
+	                       <map name="keywordsdatabase">
+	                           <get name="x2"/>
+	                       </map>
+	                   </set>
+	               </think>
+	               <condition name="y1" value="Database Administration">
+	                   <condition name="y2" value="Database Administration">
+	                       <think>
+	                           <set name="career">Database Administration</set>
+	                       </think>
+	                       <delay>1</delay><map name="phrases">4</map> 
+	                   </condition>
+	               </condition> 
+	           </condition> 
+	           
+	           
+	           
+	           <condition name="mobileopen" value="true"> 
+	               <think>
+	                   <set name="y1">
+	                       <map name="keywordsmobile">
+	                           <get name="x1"/>
+	                       </map>
+	                   </set>
+	                   <set name="y2">
+	                       <map name="keywordsmobile">
+	                           <get name="x2"/>
+	                       </map>
+	                   </set>
+	               </think>
+	               <condition name="y1" value="Mobile Applications">
+	                   <condition name="y2" value="Mobile Applications">
+	                       <think>
+	                           <set name="career">Mobile Apps</set>
+	                       </think>
+	                       <delay>1</delay><map name="phrases">5</map> 
+	                   </condition>
+	               </condition> 
+	           </condition>  
+	            
+               <srai>result</srai>   
+	         </template>
+        </category>
+        
+        <category>
+            <pattern>result</pattern>
+            <template>
+                <condition name="career">
+                    <li value="undecided">
+                        <think>
+                            <set name="topic">first</set>
+                        </think>
+                        <delay>1</delay>
+                        I'm sorry, I wasn't able to come up with a 
+                        recommedation. In one, or two words, please
+                        tell me one thing you have enjoyed in your degree
+                        program.
+                    </li>
+                    <li>
+                        <think>
+                            <set name="topic">yesorno1</set>
+                        </think>
+                        <srai>yn1</srai>    
+                    </li>
+                </condition>
+            </template>
+        </category>
+	    
+	</topic>
+	
+	
+</aiml>
